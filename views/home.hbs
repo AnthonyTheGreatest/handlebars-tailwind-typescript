@@ -1,0 +1,44 @@
+<h1>Home Page</h1>
+
+<p>Welcome to my app.</p>
+
+{{#if showFullName}}
+    <p>My name is {{fullName}}.</p>
+    {{else}}
+    <p>My name is {{name}}.</p>
+{{/if}}
+
+{{#if showAge}}
+    <p>I am {{age}} years old.</p>
+{{/if}}
+
+{{#unless havePen}}
+    <p>Now please give me back my pen.</p>
+{{/unless}}
+<hr>
+
+<p>People:</p>
+
+{{#each people}}
+    <p>{{this}}</p>
+    {{!-- <p>{{.}}</p> ALSO WORKS --}}
+{{/each}}
+<br>
+
+<p>Family:</p>
+
+{{#each family as |value key|}}
+    <p>{{key}}: {{value}}</p>
+    {{!-- {{this}} would refer to the value (we don't need ...as... in this case) --}}
+{{/each}}
+<br>
+
+{{!-- use '{{log this}}' to log this to the console --}}
+
+{{#each lists}}
+    {{#each this.list}}
+    {{!-- {{#each this/list}} ALSO WORKS --}}
+        {{this}},
+    {{/each}}
+{{/each}}
+<br>
