@@ -15,7 +15,7 @@
 {{#unless havePen}}
     <p>Now please give me back my pen.</p>
 {{/unless}}
-<hr>
+<br>
 
 <p>People:</p>
 
@@ -41,4 +41,18 @@
         {{this}},
     {{/each}}
 {{/each}}
+<br>
+<br>
+
+<p>Mom in family:</p>
+<p>{{lookup family 'mom'}} </p>
+<br>
+
+<p>First person:</p>
+<p>{{lookup people 0}}</p>
+<br>
+
+{{!-- custom helper: --}}
+<p>40 + 10 is:</p>
+<p>{{addTen 40}}</p>
 <br>
