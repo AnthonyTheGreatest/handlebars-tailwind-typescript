@@ -18,7 +18,7 @@ const hbs = handlebars.create({
     partialsDir: 'views/partials',
     extname: '.hbs',
     helpers: {
-        addTen: function(value) {
+        addTen: function(value: number) {
             return value + 10;
         }
     }
